@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -19,7 +20,8 @@ public class GitHubUtils {
     private final static String GITHUB_SEARCH_SORT_PARAM = "sort";
     private final static String GITHUB_SEARCH_DEFAULT_SORT = "stars";
 
-    public static class SearchResult {
+    public static class SearchResult implements Serializable {
+        public static final String EXTRA_SEARCH_RESULT = "GitHubUtils.SearchResult";
         public String fullName;
         public String description;
         public String htmlURL;

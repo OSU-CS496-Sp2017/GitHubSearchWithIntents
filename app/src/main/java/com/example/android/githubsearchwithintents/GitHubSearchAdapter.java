@@ -47,6 +47,7 @@ public class GitHubSearchAdapter extends RecyclerView.Adapter<GitHubSearchAdapte
     public void onBindViewHolder(SearchResultViewHolder holder, int position) {
         holder.bind(mSearchResultsList.get(position));
     }
+
     public interface OnSearchResultClickListener {
         void onSearchResultClick(GitHubUtils.SearchResult searchResult);
     }
